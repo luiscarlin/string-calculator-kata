@@ -2,6 +2,10 @@ package com.stringcalculator;
 
 public class StringCalculator {
     public int add(String operands) {
-        return 0;
+
+        if (operands.isEmpty()) {
+            return 0;
+        }
+        return Integer.valueOf(operands);
     }
 }
