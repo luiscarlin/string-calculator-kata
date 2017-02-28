@@ -63,4 +63,10 @@ public class StringCalculatorTest {
         int result = underTest.add("1, 2, 4 , 5");
         assertThat(result, is(12));
     }
+
+    @Test
+    public void addingTrimsEndOfLines() throws Exception {
+        int result = underTest.add("\n1\n,\n2,4\n");
+        assertThat(result, is(7));
+    }
 }
