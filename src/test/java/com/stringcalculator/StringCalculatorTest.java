@@ -22,15 +22,21 @@ public class StringCalculatorTest {
     }
 
     @Test
-    public void addingWithOneNumberIsTheSameNumber() throws Exception {
+    public void addingOneNumberReturnsTheSameNumber() throws Exception {
         StringCalculator underTest = new StringCalculator();
         int result = underTest.add("1");
         assertThat(result, is(1));
     }
 
     @Test
-    public void addingWithTwoNumberIsTheirSum() throws Exception {
+    public void addingTwoNumberReturnsTheirSum() throws Exception {
         int result = underTest.add("1,2");
         assertThat(result, is(3));
+    }
+
+    @Test
+    public void addingThreeNumbersReturnsTheirSum() throws Exception {
+        int result = underTest.add("1,2,3");
+        assertThat(result, is(6));
     }
 }
