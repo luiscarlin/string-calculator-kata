@@ -75,4 +75,10 @@ public class StringCalculatorTest {
         int result = underTest.add("    1   ,   2,4     ");
         assertThat(result, is(7));
     }
+
+    @Test
+    public void addingSupportsAsteriskAsDelimiter() throws Exception {
+        int result = underTest.add("1*2*3", "*");
+        assertThat(result, is(6));
+    }
 }

@@ -10,8 +10,8 @@ public class StringCalculator {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(StringCalculator.class);
 
-    public int add(String operands) {
-        List<String> parsedOperands = Arrays.asList(operands.split(","));
+    public int add(String operands, String delimiter) {
+        List<String> parsedOperands = Arrays.asList(operands.split("\\" + delimiter));
 
         int sum = 0;
 
@@ -26,5 +26,9 @@ public class StringCalculator {
             }
         }
         return sum;
+    }
+
+    public int add(String operand) {
+        return add(operand, ",");
     }
 }
