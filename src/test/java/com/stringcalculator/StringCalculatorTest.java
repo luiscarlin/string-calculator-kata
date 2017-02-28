@@ -51,4 +51,10 @@ public class StringCalculatorTest {
         int result = underTest.add("1,,,%,5%,7,2");
         assertThat(result, is(10));
     }
+
+    @Test
+    public void addingTenNumbersReturnsTheirSum() throws Exception {
+        int result = underTest.add("1,2,3,4,5,6,7,8,9,10");
+        assertThat(result, is(55));
+    }
 }
