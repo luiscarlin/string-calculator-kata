@@ -45,4 +45,10 @@ public class StringCalculatorTest {
         int result = underTest.add("1,2,3,A");
         assertThat(result, is(6));
     }
+
+    @Test
+    public void addingWithNonNumbersSkipsNonNumbers() throws Exception {
+        int result = underTest.add("1,,,%,5%,7,2");
+        assertThat(result, is(10));
+    }
 }
