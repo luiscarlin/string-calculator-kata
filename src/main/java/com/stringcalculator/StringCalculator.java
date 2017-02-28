@@ -28,7 +28,7 @@ public class StringCalculator {
         return sum;
     }
 
-    public int add(String operand) {
-        return add(operand, ",");
+    public int add(String operands) {
+        return add(operands, ",");
     }
 }

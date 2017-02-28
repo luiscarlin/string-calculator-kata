@@ -87,4 +87,10 @@ public class StringCalculatorTest {
         int result = underTest.add("1 3 4   5    6", " ");
         assertThat(result, is(19));
     }
+
+    @Test
+    public void addingSupportsBackSlashesAsDelimiters() throws Exception {
+        int result = underTest.add("1/2/3/4////5 /6 / 7 ", "/");
+        assertThat(result, is(28));
+    }
 }
