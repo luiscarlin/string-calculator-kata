@@ -15,7 +15,9 @@ public class StringCalculator {
 
         int sum = 0;
 
-        for (String operand: parsedOperands) {
+        for (String operand : parsedOperands) {
+            operand = operand.trim();
+
             try {
                 sum += Integer.valueOf(operand);
             }
