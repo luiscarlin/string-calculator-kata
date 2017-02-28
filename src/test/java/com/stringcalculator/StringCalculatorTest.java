@@ -27,4 +27,10 @@ public class StringCalculatorTest {
         int result = underTest.add("1");
         assertThat(result, is(1));
     }
+
+    @Test
+    public void addingWithTwoNumberIsTheirSum() throws Exception {
+        int result = underTest.add("1,2");
+        assertThat(result, is(3));
+    }
 }
