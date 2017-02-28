@@ -69,4 +69,10 @@ public class StringCalculatorTest {
         int result = underTest.add("\n1\n,\n2,4\n");
         assertThat(result, is(7));
     }
+
+    @Test
+    public void addingTrimsTabs() throws Exception {
+        int result = underTest.add("    1   ,   2,4     ");
+        assertThat(result, is(7));
+    }
 }
