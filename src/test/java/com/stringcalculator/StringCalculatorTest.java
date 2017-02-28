@@ -81,4 +81,10 @@ public class StringCalculatorTest {
         int result = underTest.add("1*2*3", "*");
         assertThat(result, is(6));
     }
+
+    @Test
+    public void addingSupportsSpacesAsDelimiters() throws Exception {
+        int result = underTest.add("1 3 4   5    6", " ");
+        assertThat(result, is(19));
+    }
 }
